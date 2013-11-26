@@ -1,0 +1,83 @@
+
+body {
+  background: url("http://qfxblog.files.wordpress.com/2011/05/terminator.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: over;
+  -o-background-size: cover;
+ background-size: cover;
+}
+
+.bought-true
+{
+  text-decoration: line-through;s
+}
+
+.jumbotron1{
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  width:750px;
+  height:100%;
+  font-size: 20px;
+  font-family: impact;
+}
+
+.jumbotron2{
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  margin-left:auto;
+  margin-right:auto;
+  width:550px;
+  height:100%;
+  font-size: 20px;
+  font-family: impact;
+}
+
+.title1{
+  color: red;
+  font-size: 40px;
+  font-family: impact;
+  text-align: center;
+
+}
+
+.title2{
+  color: #70D3FF;
+  font-size: 20px;
+  font-family: impact;
+  text-align: center;
+
+.boxtop{
+  color: #FF9FE7;
+  text-align: center;
+}
+
+.top{
+  height: 100px;
+  width: 400px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.form{
+  font-size: 16px;
+  font-family: "Comic Sans MS";
+}
+
+.clean{
+margin-left: 10px;
+}
+
+.list-group-item{
+  margin-top: 7px;
+  background-color: #5CACEE;
+  opacity: 0.8;
+  width: 333px;
+  font-size: 20px;
+}
+
+
+
