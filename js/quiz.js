@@ -12,3 +12,23 @@ function slctrl ($scope){
   };
 }//end of crtl
 
+function quizctrl ($scope){
+$scope.questions =[
+  {
+    question: "What is 0 + 0?",
+    choices:  ["0", "1", "2"],
+    correct:  0
+  },
+
+  {
+    question: "What is 1 + 0?",
+    choices:  ["0", "1", "2"],
+    correct:  1
+  },
+
+  {
+    question: "What is 0 + 2?",
+    choices:  ["0", "1", "2"],
+    correct:  2
+  }]
+}

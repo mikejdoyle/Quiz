@@ -18,18 +18,16 @@
          <div class="title1">
              <p>Can You Match The Arnold Quote to the Movie?</p>
          </div>
-    </div>
-    <div class="jumbotron2" ng-app>
-         <div class="title2">
-             <p>"Well, you see, the problem with terrorists. They're really inconsiderate when it comes to peoples schedules."</p>
-         </div>
-        <div class="boxtop">
-             <p></p>
-         </div>
 
-        <div class= "form" ng-controller="slctrl">
-
-        </div>
+             <form ng-submit="submit()" ng-controller="quizctrl">
+                  <p ng-repeat="choice in questions.choices">
+                     <input type = "radio" id="quiz-answer"/>
+                      <label>{{$index}}{{choice}}</label>
+                  </p>
+             </form>
+        <ul>
+            <li ng-repeat="question in questions">{{$index}}</li>
+        </ul>
     </div>
 
 </body>
