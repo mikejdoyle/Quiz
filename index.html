@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
     <title>Quiz</title>
     <meta charset="UTF-8">
@@ -13,21 +13,34 @@
     <script src="./js/quiz.js" type="text/javascript"></script>
 
 </head>
-<body>
-    <div class="jumbotron1" ng-app>
+<body ng-controller="quizCtrl">
+    <div class="jumbotron1">
          <div class="title1">
              <p>Can You Match The Arnold Quote to the Movie?</p>
          </div>
 
-             <form ng-submit="submit()" ng-controller="quizctrl">
-                  <p ng-repeat="choice in questions.choices">
-                     <input type = "radio" id="quiz-answer"/>
-                      <label>{{$index}}{{choice}}</label>
-                  </p>
+             <form ng-submit="submit()" ng-hide="done">
+                 <span class ="answer">Question {{index+1}}:
+                     {{questions[index].question}}</span>
+
+                 <div ng-repeat="choice in questions[index].choices">
+                     <input type="radio" value={{choice}} ng-model = "user.answer">
+                     <label class="label">{{choice}}</label></input>
+                  </div>
+
+                   <input type = "submit" value= "SUBMIT" class= "button"/><br>
+        The correct answer is: {{showCorrect}}<br>
+        Your Current score is: {{user.right}} correct out of {{qCount}}<br>
+
              </form>
-        <ul>
-            <li ng-repeat="question in questions">{{$index}}</li>
-        </ul>
+          <div class="panel panel-success" ng-show="done">
+         <div class="panel-heading">Quiz Summary </div>
+          <div class="panel-body">
+            <ul class="list-group">
+            <li class="list-group-item">Correct: {{user.right}}</li>
+            <li class="list-group-item">Incorrect: {{user.wrong}}</li>
+          </div>
+
     </div>
 
 </body>

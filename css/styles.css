@@ -1,6 +1,6 @@
 
 body {
- /*background: url("http://qfxblog.files.wordpress.com/2011/05/terminator.jpg") no-repeat center center fixed;*/
+ background: url("http://qfxblog.files.wordpress.com/2011/05/terminator.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: over;
   -o-background-size: cover;
@@ -9,7 +9,7 @@ body {
 
 .bought-true
 {
-  text-decoration: line-through;s
+  text-decoration: line-through;
 }
 
 .jumbotron1{
