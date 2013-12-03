@@ -2,15 +2,15 @@
 
 var qs =[
   {
-    question: "hasta la vista baby?",
-    choices:  ["Terminator", "Terminator 2", "Kindergarden Cop"],
-    correct:  "Teminator"
+    question: "Hasta la vista, baby!",
+    choices:  ["The Terminator", "Terminator 2 Judgement Day", "Kindergarden Cop", "Commando"],
+    correct:  "Terminator 2 Judgement Day"
   },
 
   {
-    question: "I'll Be back",
-    choices:  ["Commando", "The Terminator", "Terminator 2 Judgement Day", "Terminator 3 Rise of the Machines"],
-    correct:  "The Terminator"
+    question: "Don't disturb my friend, he's dead tired.",
+    choices:  ["Last Action Hero", "Commando", "Conan the Barbarian", "Predator"],
+    correct:  "Commando"
   },
 
   {
@@ -18,10 +18,11 @@ var qs =[
     choices:  ["Twins", "Junior", "Last Action Hero", "Raw Deal"],
     correct:  "Last Action Hero"
   },
-{
-    question: "hasta la vista baby?",
-    choices:  ["Terminator", "Terminator 2", "Kindergarden Cop"],
-    correct:  "Teminator"
+
+  {
+    question: "If I am not me, then who the hell am I?",
+    choices:  ["Total Recall", "Terminator 3: Rise of the Machines" "Commando", "The Running Man"],
+    correct:  "Total Recall"
   },
 
   {
