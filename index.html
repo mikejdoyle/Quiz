@@ -16,21 +16,21 @@
 <body ng-controller="quizCtrl">
     <div class="jumbotron1">
          <div class="title1">
-             <p>Can You Match The Arnold Quote to the Movie?</p>
+             <p>Match Arnold's Quote to his Movie</p>
          </div>
 
              <form ng-submit="submit()" ng-hide="done">
-                 <span class ="answer">Question {{index+1}}:
+                 <span class ="question">Question {{index+1}}:<br>
                      {{questions[index].question}}</span>
 
                  <div ng-repeat="choice in questions[index].choices">
                      <input type="radio" value={{choice}} ng-model = "user.answer">
-                     <label class="label">{{choice}}</label></input>
+                     <label class="answers">{{choice}}</label></input>
                   </div>
 
-                   <input type = "submit" value= "SUBMIT" class= "button"/><br>
-        The correct answer is: {{showCorrect}}<br>
-        Your Current score is: {{user.right}} correct out of {{qCount}}<br>
+                   <input type = "submit" value= "SUBMIT" class= "btn btn-default submit"/><br>
+      <span class ="score"> The correct answer is: {{showCorrect}}<br>
+          Your Current score is:<br> {{user.right}} correct out of {{qCount}}<br></span>
 
              </form>
           <div class="panel panel-success" ng-show="done">

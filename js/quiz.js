@@ -2,33 +2,38 @@
 
 var qs =[
   {
-    question: "Hasta la vista, baby!",
-    choices:  ["The Terminator", "Terminator 2 Judgement Day", "Kindergarden Cop", "Commando"],
-    correct:  "Terminator 2 Judgement Day"
+    question: "To crush your enemies, see them driven before you, and to hear the lamentation of the women!",
+    choices:  ["Collateral Damage", "Conan the Barbarian", "The Terminator", "Predator"],
+    correct:  "Conan the Barbarian",
+    image: "http://a.abcnews.go.com/images/Entertainment/pd_arnold_schwarzenegger_conan_jef_121026_wmain.jpg"
   },
 
   {
     question: "Don't disturb my friend, he's dead tired.",
     choices:  ["Last Action Hero", "Commando", "Conan the Barbarian", "Predator"],
-    correct:  "Commando"
+    correct:  "Commando",
+    image: "http://filmdump.files.wordpress.com/2013/04/commando-1.jpg"
   },
 
   {
     question: "I'm the famous comedian Arnold Braunschweiger.",
     choices:  ["Twins", "Junior", "Last Action Hero", "Raw Deal"],
-    correct:  "Last Action Hero"
+    correct:  "Last Action Hero",
+    image: "http://www.empireonline.com/images/uploaded/arnold-schwarzenegger-last-action-hero.jpg"
   },
 
   {
     question: "If I am not me, then who the hell am I?",
-    choices:  ["Total Recall", "Terminator 3: Rise of the Machines" "Commando", "The Running Man"],
-    correct:  "Total Recall"
+    choices:  ["Total Recall", "Terminator 3: Rise of the Machines", "Commando", "The Running Man"],
+    correct:  "Total Recall",
+    image: "http://cdn.wegotthiscovered.com/wp-content/uploads/Total-Recall-Blu-Review-Pic-2-670x360.jpg"
   },
 
   {
-    question: "I'll Be back",
-    choices:  ["Commando", "The Terminator", "Terminator 2 Judgement Day", "Terminator 3 Rise of the Machines"],
-    correct:  "The Terminator"
+    question: "Hasta la vista, baby!",
+    choices:  ["The Terminator", "Terminator 2 Judgement Day", "Kindergarden Cop", "Commando"],
+    correct:  "Terminator 2 Judgement Day",
+    image: "http://www.mostlybymotorcycle.com/wp-content/uploads/2012/02/Arnie.jpg"
   }];
 
 function quizCtrl ($scope){
@@ -45,20 +50,18 @@ function quizCtrl ($scope){
     if(this.index < $scope.qCount){
        if(this.user.answer==$scope.questions[$scope.index].correct){
          $scope.user.right++;
-         $scope.index++;
-         $scope.showCorrect=$scope.questions[$scope.index].correct;
-
        }else{
          $scope.user.wrong++;
-         $scope.index++;
-         $scope.showCorrect=$scope.questions[$scope.index].correct;
-
        }
+      $scope.showCorrect=$scope.questions[$scope.index].correct;
+      if(this.index < $scope.qCount-1){
+       $scope.index++;
+      }
+      else{
+        $scope.done=true;
+      }
+    }
 
-    }
-    if(this.index == $scope.qCount){
-      $scope.done=true;
-    }
   };
 }
 
