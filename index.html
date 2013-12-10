@@ -16,7 +16,7 @@
 <body ng-controller="quizCtrl">
     <div class="jumbotron1">
          <div class="title1">
-             <p>Match Arnold's Quote to his Movie</p>
+             <p>Match Arnold's Quote<br> To His Movie</p>
          </div>
 
              <form ng-submit="submit()" ng-hide="done">
@@ -33,12 +33,13 @@
           Your Current score is:<br> {{user.right}} correct out of {{qCount}}<br></span>
 
              </form>
-          <div class="panel panel-success" ng-show="done">
+          <div class="panel panel-danger" ng-show="done">
          <div class="panel-heading">Quiz Summary </div>
           <div class="panel-body">
             <ul class="list-group">
             <li class="list-group-item">Correct: {{user.right}}</li>
             <li class="list-group-item">Incorrect: {{user.wrong}}</li>
+            <input type = "reset" value= "TRY AGAIN?" class= "btn btn-default submit"/>
           </div>
 
     </div>
