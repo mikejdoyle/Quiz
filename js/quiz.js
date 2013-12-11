@@ -1,18 +1,20 @@
 //file:///Users/michaeldoyle/coding_projects/quiz/index.html
 
+var app= angular.module ("quiz", ["ngAnimate"]);
+
 var qs =[
   {
     question: "Thank you for the cookies. I look forward to tossing them",
     choices:  [" Twins", " The Running Man", " Batman and Robin", " Predator"],
     correct:  "Twins",
-    image: "http://unrealitymag.bcmediagroup.netdna-cdn.com/wp-content/uploads/2009/03/devito.jpg"
+    image: "http://4.bp.blogspot.com/-yIRgWjIhW54/UiLO3k-wK4I/AAAAAAAAPWU/AkfaWcFA0bY/s1600/2013-07-19+224.png"
   },
 
   {
     question: "Don't disturb my friend, he's dead tired.",
     choices:  [" Last Action Hero", " Commando", " Conan the Barbarian", " Predator"],
     correct:  "Commando",
-    image: "http://filmdump.files.wordpress.com/2013/04/commando-1.jpg"
+    image: "https://static.squarespace.com/static/51b3dc8ee4b051b96ceb10de/51ce6099e4b0d911b4489b79/51ce61efe4b0d911b44a69de/1272517437147/1000w/commando5.jpg"
   },
 
   {
@@ -36,7 +38,7 @@ var qs =[
     image: "http://www.mostlybymotorcycle.com/wp-content/uploads/2012/02/Arnie.jpg"
   }];
 
-function quizCtrl ($scope){
+app.controller("quizCtrl", function ($scope){
   $scope.showCorrect = "";
   $scope.done = false;
   $scope.user = {answer:"",
@@ -47,6 +49,7 @@ function quizCtrl ($scope){
   $scope.questions = qs;
   $scope.qCount = qs.length;
   $scope.submit = function(){
+    var correctUrl= $scope.questions[$scope.index].image;
     if(this.index < $scope.qCount){
        if(this.user.answer==$scope.questions[$scope.index].correct){
          $scope.user.right++;
@@ -54,6 +57,7 @@ function quizCtrl ($scope){
          $scope.user.wrong++;
        }
       $scope.showCorrect=$scope.questions[$scope.index].correct;
+      $('.backimage').fadeOut().css('background-image','url("'+correctUrl+'")').fadeIn();
       if(this.index < $scope.qCount-1){
        $scope.index++;
       }
@@ -63,5 +67,5 @@ function quizCtrl ($scope){
     }
 
   };
-}
+});
 

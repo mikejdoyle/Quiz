@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="quiz">
 <head>
     <title>Quiz</title>
     <meta charset="UTF-8">
@@ -9,11 +9,13 @@
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script src="./lib/angular.min.js" language="JavaScript" type="text/javascript"></script>
+    <script src="./lib/angular-animate.js" language="JavaScript" type="text/javascript"></script>
     <script src="./lib/jquery-2.0.3.min.js" language="JavaScript" type="text/javascript"></script>
     <script src="./js/quiz.js" type="text/javascript"></script>
 
 </head>
 <body ng-controller="quizCtrl">
+  <div class="backimage">
     <div class="jumbotron1">
          <div class="title1">
              <p>Match Arnold's Quote<br> To His Movie</p>
@@ -28,7 +30,7 @@
                      <label class="answers">{{choice}}</label></input>
                   </div>
 
-                   <input type = "submit" value= "SUBMIT" class= "btn btn-default submit"/><br>
+        <input ng-animate="{enter:'animate-enter',leave:'animate-leave'}" type = "submit" value= "SUBMIT" class= "btn btn-default submit"/><br>
       <span class ="score"> The correct answer is: {{showCorrect}}<br>
           Your Current score is:<br> {{user.right}} correct out of {{qCount}}<br></span>
 
@@ -39,10 +41,11 @@
             <ul class="list-group">
             <li class="list-group-item">Correct: {{user.right}}</li>
             <li class="list-group-item">Incorrect: {{user.wrong}}</li>
-            <input type = "reset" value= "TRY AGAIN?" class= "btn btn-default submit"/>
+            <input type = "reset" onClick="window.location.reload ()" value="TRY AGAIN?" class= "btn btn-default submit"/>
           </div>
 
     </div>
+      </div>
 
 </body>
 </html>
