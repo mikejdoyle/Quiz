@@ -29,22 +29,20 @@
                      <input type="radio" value={{choice}} ng-model = "user.answer">
                      <label class="answers">{{choice}}</label></input>
                   </div>
-
-        <input ng-animate="{enter:'animate-enter',leave:'animate-leave'}" type = "submit" value= "SUBMIT" class= "btn btn-default submit"/><br>
-      <span class ="score"> The correct answer was: {{showCorrect}}<br>
-          Your Current score is:<br>{{user.right}} correct out of {{qCount}}<br></span>
-
+                  <input ng-animate="{enter:'animate-enter',leave:'animate-leave'}" type = "submit" value= "SUBMIT" class= "btn btn-default submit"/><br>
+                  <span class ="score"> The correct answer was: {{showCorrect}}<br>
+                  Your Current score is:<br>{{user.right}} correct out of {{qCount}}<br></span>
              </form>
           <div class="panel panel-danger" ng-show="done">
-         <div class="panel-heading">Quiz Summary </div>
-          <div class="panel-body">
-            <ul class="list-group">
-            <li class="list-group-item">Correct: {{user.right}}</li>
-            <li class="list-group-item">Incorrect: {{user.wrong}}</li>
-            <input type = "reset" onClick="window.location.reload ()" value="TRY AGAIN?" class= "btn btn-default submit"/>
-          </div>
-
-    </div>
+              <p class="last">The correct answer was: Terminator 2 Judgement Day</p>
+              <div class="panel-heading">Quiz Summary </div>
+                  <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Correct: {{user.right}}</li>
+                        <li class="list-group-item">Incorrect: {{user.wrong}}</li>
+                    <input type = "reset" onClick="window.location.reload ()" value="TRY AGAIN?" class= "btn btn-default submit"/>
+                  </div>
+           </div>
       </div>
 
 </body>

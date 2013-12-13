@@ -59,10 +59,18 @@ background-color: black;
   margin-bottom: 20px;
 }
 
-
-
 .score{
   color: red;
+}
+
+.last{
+  font-size: 14px;
+}
+
+.panel{
+  margin-top: 200px;
+  width: 400px;
+  height:200px;
 }
 
 
